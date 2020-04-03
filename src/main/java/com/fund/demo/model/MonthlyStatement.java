@@ -25,8 +25,8 @@ public class MonthlyStatement {
 	private Date date;
 	private int debitamount;
 	private int creditamount;
-	@ManyToOne(cascade=CascadeType.ALL)  
-	private UserRegistration  userregistration;
+	//@ManyToOne(cascade=CascadeType.ALL)  
+	//private UserRegistration  userregistration;
 	
 	public int getMid() {
 		return mid;
@@ -64,17 +64,17 @@ public class MonthlyStatement {
 	public void setCreditamount(int creditamount) {
 		this.creditamount = creditamount;
 	}
-	public UserRegistration getUserregistration() {
-		return userregistration;
-	}
-	public void setUserregistration(UserRegistration userregistration) {
-		this.userregistration = userregistration;
-	}
-	@Override
-	public String toString() {
-		return "MonthlyStatement [mid=" + mid + ", uid=" + uid + ", accountnumber=" + accountnumber + ", date=" + date
-				+ ", debitamount=" + debitamount + ", creditamount=" + creditamount + ", userregistration="
-				+ userregistration + "]";
-	}
+//	public UserRegistration getUserregistration() {
+//		return userregistration;
+//	}
+//	public void setUserregistration(UserRegistration userregistration) {
+//		this.userregistration = userregistration;
+//	}
+//	@Override
+//	public String toString() {
+//		return "MonthlyStatement [mid=" + mid + ", uid=" + uid + ", accountnumber=" + accountnumber + ", date=" + date
+//				+ ", debitamount=" + debitamount + ", creditamount=" + creditamount + ", userregistration="
+//				+ userregistration + "]";
+//	}
 
 }

@@ -32,23 +32,6 @@ public class UserController {
 	private UserService userService;
 	@Autowired
 	UserRepository userrepository;
-	@RequestMapping("/")
-	public String  message() {
-		return "hello";
-	}
-	@RequestMapping("/helloworld")
-	public String  helloWorld() {
-		return "hi";
-	}
-	@RequestMapping("/helloworld/{name}")
-	public String  helloWorldName(@PathVariable String name) {
-		return "hi  "  +name;
-	}
-
-	@RequestMapping("/helloworld/user")
-	public UserRegistration getUser() {
-		return  new UserRegistration();
-	}
 
 
 
@@ -64,20 +47,20 @@ public class UserController {
 
 		return userService.getUserRegistrationById(id);  
 	}  
-	//creating a delete mapping that deletes a specified book  
+	
 	@DeleteMapping("/user/{id}")  
 	private void deleteUser(@PathVariable("id") Long id)   
 	{  
 		userService.delete(id);  
 	}  
-	//creating post mapping that post the book detail in the database  
+	
 	@PostMapping("/users")  
 	private Long saveUser(@RequestBody UserRegistration users)   
 	{  
 		userService.save(users);  
 		return users.getId();  
 	}  
-	//creating put mapping that updates the book detail   
+	
 	@PutMapping("/users")  
 	private UserRegistration update(@RequestBody UserRegistration users)   
 	{  
@@ -86,23 +69,9 @@ public class UserController {
 	}  
 
 
-	@RequestMapping("/jpa/user")
-	public List<UserRegistration> getUser1() {
-		return  userrepository.findAll();
+	
+
+	
 	}
 
-	@GetMapping("/jpa/getuser)")
-	public List<UserRegistration> jpagetUser(){
-		return userrepository.findAll();
 
-	}
-	@GetMapping("/jpa/getuser/{id})")
-	public Optional<UserRegistration> jpagetUser(@PathVariable Long id) throws Exception{
-		Optional<UserRegistration> user=userrepository.findById(id);
-		if(user.isPresent())
-			throw new Exception("userid"+id);
-		return user;
-
-	}
-
-}

@@ -18,7 +18,7 @@ public class PayeeList {
 	private Date transactiondate;
 	private  Long transactionamount;
 	private String  transferdeatils;
-    private UserRegistration userregistration;
+  //  private UserRegistration userregistration;
 	
     
 	public int getPid() {
@@ -51,17 +51,17 @@ public class PayeeList {
 	public void setTransferdeatils(String transferdeatils) {
 		this.transferdeatils = transferdeatils;
 	}
-	public UserRegistration getUserregistration() {
-		return userregistration;
-	}
-	public void setUserregistration(UserRegistration userregistration) {
-		this.userregistration = userregistration;
-	}
-	@Override
-	public String toString() {
-		return "PayeeList [pid=" + pid + ", uid=" + uid + ", transactiondate=" + transactiondate
-				+ ", transactionamount=" + transactionamount + ", transferdeatils=" + transferdeatils
-				+ ", userregistration=" + userregistration + "]";
-	}
+//	public UserRegistration getUserregistration() {
+//		return userregistration;
+//	}
+//	public void setUserregistration(UserRegistration userregistration) {
+//		this.userregistration = userregistration;
+//	}
+//	@Override
+//	public String toString() {
+//		return "PayeeList [pid=" + pid + ", uid=" + uid + ", transactiondate=" + transactiondate
+//				+ ", transactionamount=" + transactionamount + ", transferdeatils=" + transferdeatils
+//				+ ", userregistration=" + userregistration + "]";
+//	}
    
 }
